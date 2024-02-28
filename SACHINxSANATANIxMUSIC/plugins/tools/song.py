@@ -23,9 +23,9 @@ from pyrogram.types import (InlineKeyboardButton,
 
 from config import (BANNED_USERS, SONG_DOWNLOAD_DURATION,
                     SONG_DOWNLOAD_DURATION_LIMIT)
-from DAXXMUSIC.utils.decorators.language import language, languageCB
-from DAXXMUSIC.utils.formatters import convert_bytes
-from DAXXMUSIC.utils.inline.song import song_markup
+from SACHINxSANATANIxMUSIC.utils.decorators.language import language, languageCB
+from SACHINxSANATANIxMUSIC.utils.formatters import convert_bytes
+from SACHINxSANATANIxMUSIC.utils.inline.song import song_markup
 
 # Command
 SONG_COMMAND = ["song"]
