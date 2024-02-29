@@ -1,7 +1,8 @@
-impor SACHINxSANATANIxMUSIC.core.mongoom typing import Dict, List, Union
+import random
+from typing import Dict, List, Union
 
 from SACHINxSANATANIxMUSIC import userbot
-from .core.mongo import mongodb
+from SACHINxSANATANIxMUSIC.core.mongo import mongodb
 
 authdb = mongodb.adminauth
 authuserdb = mongodb.authuser
