@@ -2,7 +2,7 @@ from SACHINxSANATANIxMUSIC.core.bot import DAXX
 from SACHINxSANATANIxMUSIC.core.dir import dirr
 from SACHINxSANATANIxMUSIC.core.git import git
 from SACHINxSANATANIxMUSIC.core.userbot import Userbot
-from SACHINxSANATANIxMUSIC.misc import dbb, heroku
+from SACHINxSANATANIxMUSIC.misc' import dbb, heroku
 
 from SafoneAPI import SafoneAPI
 from .logging import LOGGER
