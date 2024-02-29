@@ -1,4 +1,5 @@
-from SACHINxSANATANIxMUSIC.utils.stuffs.helperfrom pyrogram import filters, types
+from typing import Union
+from pyrogram import filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message, InlineKeyboardButton
 from SACHINxSANATANIxMUSIC import app
 from SACHINxSANATANIxMUSIC.utils import help_pannel
@@ -8,7 +9,7 @@ from SACHINxSANATANIxMUSIC.utils.inline.help import help_back_markup, private_he
 from config import BANNED_USERS, START_IMG_URL, SUPPORT_CHAT
 from strings import get_string, helpers
 from SACHINxSANATANIxMUSIC.utils.stuffs.buttons import BUTTONS
-from .utils.stuffs.helper import Helper
+from SACHINxSANATANIxMUSIC.utils.stuffs.helper import Helper
 
 @app.on_message(filters.command(["help"]) & filters.private & ~BANNED_USERS)
 @app.on_callback_query(filters.regex("settings_back_helper") & ~BANNED_USERS)
