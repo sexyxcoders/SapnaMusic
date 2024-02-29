@@ -1,10 +1,12 @@
-imporSACHINxSANATANIxMUSIC.utils.database pyrogram import filters
+import asyncio
+
+from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.errors import FloodWait
 
 from SACHINxSANATANIxMUSIC import app
 from SACHINxSANATANIxMUSIC.misc import SUDOERS
-from .utils.database import (
+from SACHINxSANATANIxMUSIC.utils.database import (
     get_active_chats,
     get_authuser_names,
     get_client,
@@ -115,7 +117,7 @@ async def braodcast_message(client, message, _):
     if "-assistant" in message.text:
         aw = await message.reply_text(_["broad_5"])
         text = _["broad_6"]
-        from SACHINxSANATANIxMUSIC.core.userbot import assistants
+        from DAXXMUSIC.core.userbot import assistants
 
         for num in assistants:
             sent = 0
