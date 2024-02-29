@@ -14,17 +14,17 @@ from pyrogram.errors import (
     UserIsBlocked,
 )
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
-from SACHINXSANATANIXMUSIC import app
+from SACHINxSANATANIxMUSIC import app
 from config import BOT_USERNAME
-from SACHINXSANATANIXMUSIC.utils.errors import capture_err
+from SACHINxSANATANIxMUSIC.utils.errors import capture_err
 
-from SACHINXSANATANIXMUSIC.utils.files import (
+from SACHINxSANATANIxMUSIC.utils.files import (
     get_document_from_file_id,
     resize_file_to_sticker_size,
     upload_document,
 )
 
-from SACHINXSANATANIXMUSIC.utils.stickerset import (
+from SACHINxSANATANIxMUSIC.utils.stickerset import (
     add_sticker_to_set,
     create_sticker,
     create_sticker_set,
