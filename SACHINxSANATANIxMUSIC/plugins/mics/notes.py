@@ -1,10 +1,10 @@
-from SACHINxSANATANIxMUSIC.utils.yumidbNIxMUSIC import app
+from SACHINxSANATANIxMUSIC import app
 from config import BOT_USERNAME
 from pyrogram import filters
 from SACHINxSANATANIxMUSIC.utils.daxx_ban import admin_filter
 from SACHINxSANATANIxMUSIC.mongo.notesdb import *
 from SACHINxSANATANIxMUSIC.utils.notes_func import GetNoteMessage, exceNoteMessageSender, privateNote_and_admin_checker
-from .utils.yumidb import user_admin
+from SACHINxSANATANIxMUSIC.utils.yumidb import user_admin
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup , Message , CallbackQuery
 from pyrogram.enums import ChatMemberStatus
 
