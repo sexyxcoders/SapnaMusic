@@ -1,4 +1,4 @@
-imporSACHINxSANATANIxMUSIC.utilscio
+import asyncio
 
 from pyrogram import filters
 from pyrogram.errors import FloodWait
@@ -6,7 +6,7 @@ from pyrogram.types import Message
 
 from SACHINxSANATANIxMUSIC import app
 from SACHINxSANATANIxMUSIC.misc import SUDOERS
-from .utils import get_readable_time
+from SACHINxSANATANIxMUSIC.utils import get_readable_time
 from SACHINxSANATANIxMUSIC.utils.database import (
     add_banned_user,
     get_banned_count,
