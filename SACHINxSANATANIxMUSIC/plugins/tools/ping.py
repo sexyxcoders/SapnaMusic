@@ -2,7 +2,7 @@ from datetime import datetime
 from pyrogram import filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from SACHINxSANATANIxMUSIC import app
-from SACHINxSANATANIxMUSIC.core.call import VIP
+from SACHINxSANATANIxMUSIC.core.call import DAXX
 from SACHINxSANATANIxMUSIC.utils import bot_sys_stats
 from SACHINxSANATANIxMUSIC.utils.decorators.language import language
 from SACHINxSANATANIxMUSIC.utils.inline import supp_markup
