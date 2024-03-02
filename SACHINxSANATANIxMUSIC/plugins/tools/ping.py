@@ -1,28 +1,97 @@
 from datetime import datetime
-
 from pyrogram import filters
-from pyrogram.types import Message
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto
-from config import *
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from SACHINxSANATANIxMUSIC import app
-from SACHINxSANATANIxMUSIC.core.call import DAXX
+from SACHINxSANATANIxMUSIC.core.call import VIP
 from SACHINxSANATANIxMUSIC.utils import bot_sys_stats
 from SACHINxSANATANIxMUSIC.utils.decorators.language import language
 from SACHINxSANATANIxMUSIC.utils.inline import supp_markup
+from SACHINxSANATANIxMUSIC.utils.inline import close_markup
 from config import BANNED_USERS
+import aiohttp
+import asyncio
+from io import BytesIO
+from PIL import Image, ImageEnhance  # Add these imports
+
+async def make_carbon(code):
+    url = "https://carbonara.solopov.dev/api/cook"
+    async with aiohttp.ClientSession() as session:
+        async with session.post(url, json={"code": code}) as resp:
+            image = BytesIO(await resp.read())
+
+    # Open the image using PIL
+    carbon_image = Image.open(image)
+
+    # Increase brightness
+    enhancer = ImageEnhance.Brightness(carbon_image)
+    bright_image = enhancer.enhance(1.7)  # Adjust the enhancement factor as needed
+
+    # Save the modified image to BytesIO object with increased quality
+    output_image = BytesIO()
+    bright_image.save(output_image, format='PNG', quality=95)  # Adjust quality as needed
+    output_image.name = "carbon.png"
+    return output_image
 
 @app.on_message(filters.command("ping", prefixes=["/"]) & ~BANNED_USERS)
 @language
 async def ping_com(client, message: Message, _):
+    PING_IMG_URL = "https://telegra.ph/file/37b57c6aaaa793bba055a.jpg"
+    captionss = "**ᴘɪɴɢɪɴɢ ᴏᴜʀ sᴇʀᴠᴇʀ ᴡᴀɪᴛ**"
+    response = await message.reply_photo(PING_IMG_URL, caption=(captionss))
+    await asyncio.sleep(1)
+    await response.edit_caption("**ᴘɪɴɢɪɴɢ ᴏᴜʀ sᴇʀᴠᴇʀ ᴡᴀɪᴛ...**")
+    await asyncio.sleep(1)
+    await response.edit_caption("**ᴘɪɴɢɪɴɢ ᴏᴜʀ sᴇʀᴠᴇʀ ᴡᴀɪᴛ.**")
+    await asyncio.sleep(1)
+    await response.edit_caption("**ᴘɪɴɢɪɴɢ ᴏᴜʀ sᴇʀᴠᴇʀ ᴡᴀɪᴛ..**")
+    await asyncio.sleep(1.5)
+    await response.edit_caption("**ᴘɪɴɢɪɴɢ ᴏᴜʀ sᴇʀᴠᴇʀ ᴡᴀɪᴛ...**")
+    await asyncio.sleep(2)
+    await response.edit_caption("**ᴘɪɴɢɪɴɢ ᴏᴜʀ sᴇʀᴠᴇʀ ᴡᴀɪᴛ....**")
+    await asyncio.sleep(2)
+    await response.edit_caption("**sʏsᴛᴇᴍ ᴅᴀᴛᴀ ᴀɴᴀʟʏsᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ !**")
+    await asyncio.sleep(3)
+    await response.edit_caption("**sᴇɴᴅɪɴɢ sʏsᴛᴇᴍ ᴀɴᴀʟʏsᴇᴅ ᴅᴀᴛᴀ ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...**")
     start = datetime.now()
-    response = await message.reply_video(
-        video="https://graph.org/file/83ebf52e8bbf138620de7.mp4",
-        caption=_["ping_1"].format(app.mention),
-    )
-    pytgping = await DAXX.ping()
+    pytgping = await VIP.ping()
     UP, CPU, RAM, DISK = await bot_sys_stats()
     resp = (datetime.now() - start).microseconds / 1000
-    await response.edit_text(
-        _["ping_2"].format(resp, app.mention, UP, RAM, CPU, DISK, pytgping),
-        reply_markup=supp_markup(_),
-    )
+    text =  _["ping_2"].format(resp, app.name, UP, RAM, CPU, DISK, pytgping)
+    carbon = await make_carbon(text)
+    captions = "**ㅤ   ᴘɪɴɢ...ᴘᴏɴɢ...ᴘɪɴɢ\nㅤ   ᴅɪɴɢ...ᴅᴏɴɢ...ᴅɪɴɢ**"
+    await message.reply_photo((carbon), caption=captions,
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+            InlineKeyboardButton(
+                text=_["S_B_5"],
+                url=f"https://t.me/{app.username}?startgroup=true",
+            )
+        
+        ],
+        [
+            InlineKeyboardButton(
+                text="🍃 ɢʀᴏᴜᴘ 🍃", url=f"https://t.me/CODEX_KA_BAAP_4ST",
+            ),
+            InlineKeyboardButton(
+                text="🍷 ᴍᴏʀᴇ 🍷", url=f"https://t.me/All_SANATANI_BOT",
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="❄️ ʜᴇʟᴘ ❄️", url=f"https://t.me/{app.username}?start=help"
+            )
+        ],
+    ]
+    ),
+        )
+    await response.delete()
+
+    close_button = InlineKeyboardButton("๏ ᴄʟᴏsᴇ ๏", callback_data="close_data")
+    inline_keyboard = InlineKeyboardMarkup([[close_button]])
+
+@app.on_callback_query(filters.regex("^close_data"))
+async def close_callback(_, query):
+    chat_id = query.message.chat.id
+    await query.message.delete()
+	
