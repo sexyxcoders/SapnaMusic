@@ -35,8 +35,8 @@ async def make_carbon(code):
 @app.on_message(filters.command("ping", prefixes=["/"]) & ~BANNED_USERS)
 @language
 async def ping_com(client, message: Message, _):
-    PING_IMG_URL = "https://telegra.ph/file/37b57c6aaaa793bba055a.jpg"
-    captionss = "**ᴘɪɴɢɪɴɢ ᴏᴜʀ sᴇʀᴠᴇʀ ᴡᴀɪᴛ**"
+    PING_IMG_URL = "https://telegra.ph/file/7bb907999ea7156227283.jpg"
+    captionss = "**ᴘɪɴɢɪɴɢ ᴏᴜʀ sᴇʀᴠᴇʀ ᴡᴀɪᴛ.**"
     response = await message.reply_photo(PING_IMG_URL, caption=(captionss))
     await asyncio.sleep(1)
     await response.edit_caption("**ᴘɪɴɢɪɴɢ ᴏᴜʀ sᴇʀᴠᴇʀ ᴡᴀɪᴛ...**")
@@ -58,7 +58,7 @@ async def ping_com(client, message: Message, _):
     resp = (datetime.now() - start).microseconds / 1000
     text =  _["ping_2"].format(resp, app.name, UP, RAM, CPU, DISK, pytgping)
     carbon = await make_carbon(text)
-    captions = "**ㅤ   ᴘɪɴɢ...ᴘᴏɴɢ...ᴘɪɴɢ\nㅤ   ᴅɪɴɢ...ᴅᴏɴɢ...ᴅɪɴɢ**"
+    captions = "**ㅤ  ➲ ᴘɪɴɢ...ᴘᴏɴɢ...ᴘɪɴɢ\nㅤ  ➲ ᴅɪɴɢ...ᴅᴏɴɢ...ᴅɪɴɢ**"
     await message.reply_photo((carbon), caption=captions,
     reply_markup=InlineKeyboardMarkup(
             [
@@ -71,10 +71,10 @@ async def ping_com(client, message: Message, _):
         ],
         [
             InlineKeyboardButton(
-                text="🍃 ɢʀᴏᴜᴘ 🍃", url=f"https://t.me/CODEX_KA_BAAP_4ST",
+                text="🍃 ɢʀᴏᴜᴘ 🍃", url=f"https://t.me/mastiwithfriendsx",
             ),
             InlineKeyboardButton(
-                text="🍷 ᴍᴏʀᴇ 🍷", url=f"https://t.me/All_SANATANI_BOT",
+                text="🍷 ᴍᴏʀᴇ 🍷", url=f"https://t.me/SHIVANSH474",
             )
         ],
         [
@@ -94,4 +94,3 @@ async def ping_com(client, message: Message, _):
 async def close_callback(_, query):
     chat_id = query.message.chat.id
     await query.message.delete()
-	
