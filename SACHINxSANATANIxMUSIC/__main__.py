@@ -36,26 +36,26 @@ async def init():
     await app.start()
     for all_module in ALL_MODULES:
         importlib.import_module("SACHINxSANATANIxMUSIC.plugins" + all_module)
-    LOGGER("SACHINxSANATANIxMUSIC.plugins").info("𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐝 𝐁𝐚𝐛𝐲🥳...")
+    LOGGER("SACHINxSANATANIxMUSIC.plugins").info("𝗔𝗹𝗹 𝗙𝗘𝗔𝗧𝗨𝗥𝗘𝗦 𝗟𝗢𝗔𝗗𝗘𝗗 𝗕𝗢𝗦𝗦")
     await userbot.start()
     await DAXX.start()
     try:
         await DAXX.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
     except NoActiveGroupCall:
         LOGGER("SACHINxSANATANIxMUSIC").error(
-            "𝗣𝗹𝗭 𝗦𝗧𝗔𝗥𝗧 𝗬𝗢𝗨𝗥 𝗟𝗢𝗚 𝗚𝗥𝗢𝗨𝗣 𝗩𝗢𝗜𝗖𝗘𝗖𝗛𝗔𝗧\𝗖𝗛𝗔𝗡𝗡𝗘𝗟\n\n𝗗𝗔𝗫𝗫 𝗕𝗢𝗧 𝗦𝗧𝗢𝗣........"
+            "𝗣𝗹𝗭 𝗦𝗧𝗔𝗥𝗧 𝗬𝗢𝗨𝗥 𝗟𝗢𝗚 𝗚𝗥𝗢𝗨𝗣 𝗩𝗢𝗜𝗖𝗘𝗖𝗛𝗔𝗧\𝗖𝗛𝗔𝗡𝗡𝗘𝗟\n\n𝗦𝗔𝗡𝗔𝗧𝗔𝗡𝗜 𝗕𝗢𝗧 𝗦𝗧𝗢𝗣........"
         )
         exit()
     except:
         pass
     await DAXX.decorators()
     LOGGER("SACHINxSANATANIxMUSIC").info(
-        "╔═════ஜ۩۞۩ஜ════╗\n  🚩 𝗝𝗔𝗜 𝗦𝗛𝗥𝗘𝗘 𝗥𝗔𝗠 🚩\n╚═════ஜ۩۞۩ஜ════╝"
+        "𝗦𝗔𝗖𝗛𝗜𝗡 \n 𝗦𝗔𝗡𝗔𝗧𝗔𝗡𝗜 \n 𝗠𝗨𝗦𝗜𝗖"
     )
     await idle()
     await app.stop()
     await userbot.stop()
-    LOGGER("SACHINxSANATANIxMUSIC").info("𝗦𝗔𝗡𝗔𝗧𝗔𝗡𝗜 𝗜𝗦 𝗛𝗘𝗥𝗘")
+    LOGGER("SACHINxSANATANIxMUSIC").info("𝗦𝗔𝗖𝗛𝗜𝗡 𝗦𝗔𝗡𝗔𝗧𝗔𝗡𝗜 𝗜𝗦 𝗛𝗘𝗥𝗘")
 
 
 if __name__ == "__main__":
