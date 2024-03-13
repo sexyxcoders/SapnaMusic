@@ -53,7 +53,7 @@ async def ping_com(client, message: Message, _):
     await asyncio.sleep(3)
     await response.edit_caption("**sᴇɴᴅɪɴɢ sʏsᴛᴇᴍ ᴀɴᴀʟʏsᴇᴅ ᴅᴀᴛᴀ ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...**")
     start = datetime.now()
-    pytgping = await VIP.ping()
+    pytgping = await DAXX.ping()
     UP, CPU, RAM, DISK = await bot_sys_stats()
     resp = (datetime.now() - start).microseconds / 1000
     text =  _["ping_2"].format(resp, app.name, UP, RAM, CPU, DISK, pytgping)
@@ -71,10 +71,10 @@ async def ping_com(client, message: Message, _):
         ],
         [
             InlineKeyboardButton(
-                text="🍃 ɢʀᴏᴜᴘ 🍃", url=f"https://t.me/mastiwithfriendsx",
+                text="🍃 ɢʀᴏᴜᴘ 🍃", url=f"https://t.me/IM_FROM_4ST",
             ),
             InlineKeyboardButton(
-                text="🍷 ᴍᴏʀᴇ 🍷", url=f"https://t.me/SHIVANSH474",
+                text="🍷 ᴍᴏʀᴇ 🍷", url=f"https://t.me/ALL_SANATANI_BOT",
             )
         ],
         [
