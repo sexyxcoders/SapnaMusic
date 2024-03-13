@@ -16,7 +16,7 @@ from asyncio import sleep
 from pyrogram import filters, Client, enums
 from pyrogram.enums import ParseMode
 from logging import getLogger
-from SACHINxSANATANIxMUSIC.utils.daxx_ban import admin_filter
+from SACHINxSANATANIxMUSIC.utils.Shukla_ban import admin_filter
 from PIL import ImageDraw, Image, ImageFont, ImageChops
 from pyrogram import *
 from pyrogram.types import *
@@ -84,7 +84,7 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
     pfp = pfp.resize((575, 575))
     draw = ImageDraw.Draw(background)
     font = ImageFont.truetype('SACHINxSANATANIxMUSIC/assets/font.ttf', size=70)
-    welcome_font = ImageFont.truetype('DAXXMUSIC/assets/font.ttf', size=61)
+    welcome_font = ImageFont.truetype('SACHINxSANATANIxMUSIC/assets/font.ttf', size=61)
     #draw.text((630, 540), f'ID: {id}', fill=(255, 255, 255), font=font)
     #
  #   draw.text((630, 300), f'NAME: {user}', fill=(255, 255, 255), font=font)
@@ -159,8 +159,8 @@ async def greet_new_member(_, member: ChatMemberUpdated):
             welcomeimg = welcomepic(
                 pic, user.first_name, member.chat.title, user.id, user.username
             )
-            button_text = "⨀ ᴠɪᴇᴡ ɴᴇᴡ ᴍᴇᴍʙᴇʀ ⨀"
-            add_button_text = "✙ ᴧᴅᴅ ᴍᴇ ʙᴧʙʏ ✙"
+            button_text = "๏ ᴠɪᴇᴡ ɴᴇᴡ ᴍᴇᴍʙᴇʀ ๏"
+            add_button_text = "✙ ᴋɪᴅɴᴀᴘ ᴍᴇ ✙"
             deep_link = f"tg://openmessage?user_id={user.id}"
             add_link = f"https://t.me/{app.username}?startgroup=true"
             temp.MELCOW[f"welcome-{member.chat.id}"] = await app.send_photo(
@@ -169,14 +169,14 @@ async def greet_new_member(_, member: ChatMemberUpdated):
                 caption=f"""
 **⎊─────☵ ᴡᴇʟᴄᴏᴍᴇ ☵─────⎊**
 
-▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬
+**▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬**
 
 **☉ ɴᴀᴍᴇ ⧽** {user.mention}
 **☉ ɪᴅ ⧽** `{user.id}`
 **☉ ᴜ_ɴᴀᴍᴇ ⧽** @{user.username}
 **☉ ᴛᴏᴛᴀʟ ᴍᴇᴍʙᴇʀs ⧽** {count}
 
-▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬
+**▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬**
 
 **⎉──────▢✭ 侖 ✭▢──────⎉**
 """,
