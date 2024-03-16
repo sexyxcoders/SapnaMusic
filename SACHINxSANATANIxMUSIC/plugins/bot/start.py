@@ -27,26 +27,17 @@ from strings import get_string
 
 
 
-YUMI_PICS = [
-"https://telegra.ph/file/7611ad355da9de11423e8.jpg",
-"https://telegra.ph/file/1166532656cd26238c94b.jpg",
-"https://telegra.ph/file/57c386813a1a26746479d.jpg",
-"https://telegra.ph/file/c41810d3f632921d00b43.jpg",
-"https://telegra.ph/file/b912059691f481b8b3439.jpg",
-"https://telegra.ph/file/5aad0a2c595547cfbd59a.jpg",
-"https://telegra.ph/file/a8402f4a91a42893a7928.jpg",
-"https://telegra.ph/file/717dcd9ac67965556bc9f.jpg",
-"https://telegra.ph/file/5e339c35608aedc2c6e86.jpg",
-"https://telegra.ph/file/cb16f4f1f141f88fd9dc3.jpg",
-"https://telegra.ph/file/aaadeab176227f51c0d55.jpg",
-"https://telegra.ph/file/993bfbb0f4c5302b1f65d.jpg",
-"https://telegra.ph/file/729e77a7871fe0075d695.jpg",
-"https://telegra.ph/file/460e59ccd14e203f69166.jpg",
-"https://telegra.ph/file/c706584f9c4d8ec4120c7.jpg",
-"https://telegra.ph/file/ded86839c47bdd843109b.jpg",
-"https://telegra.ph/file/4bbdd86219a0d996c6bbf.jpg",
-"https://telegra.ph/file/3d34c6a50a50d48e0090a.jpg",
-"https://telegra.ph/file/46f3c54fc68bb142e57b7.jpg",
+NEXI_VID = [
+"https://telegra.ph/file/6ae3a399b96f70b6fda79.mp4",
+"https://telegra.ph/file/5df37a776933bb427b528.mp4",
+"https://telegra.ph/file/85a35e5a79525b70f5904.mp4",
+"https://telegra.ph/file/75764b093a76d08f51d2c.mp4",
+"https://telegra.ph/file/ea951700bb21f53df70c9.mp4",
+"https://telegra.ph/file/b74553a355a110d9a016b.mp4",
+"https://telegra.ph/file/959dc8b67413e50f1c4a5.mp4",
+"https://graph.org/file/2a7f857f31b32766ac6fc.mp4",
+"https://graph.org/file/83ebf52e8bbf138620de7.mp4",
+"https://graph.org/file/ba7699c28dab379b518ca.mp4",
 
 ]
 
@@ -61,7 +52,7 @@ async def start_pm(client, message: Message, _):
         if name[0:4] == "help":
             keyboard = help_pannel(_)
             return await message.reply_photo(
-                random.choice(YUMI_PICS),
+                random.choice(NEXI_VID),
                 caption=_["help_1"].format(config.SUPPORT_CHAT),
                 reply_markup=keyboard,
             )
@@ -116,7 +107,7 @@ async def start_pm(client, message: Message, _):
         served_users = len(await get_served_users())
         UP, CPU, RAM, DISK = await bot_sys_stats()
         await message.reply_photo(
-            random.choice(YUMI_PICS),
+            random.choice(NEXI_VID),
             caption=_["start_2"].format(message.from_user.mention, app.mention, UP, DISK, CPU, RAM,served_users,served_chats),
             reply_markup=InlineKeyboardMarkup(out),
         )
@@ -133,7 +124,7 @@ async def start_gp(client, message: Message, _):
     out = start_panel(_)
     uptime = int(time.time() - _boot_)
     await message.reply_photo(
-        random.choice(YUMI_PICS),
+        random.choice(NEXI_VID),
         caption=_["start_1"].format(app.mention, get_readable_time(uptime)),
         reply_markup=InlineKeyboardMarkup(out),
     )
@@ -168,7 +159,7 @@ async def welcome(client, message: Message):
 
                 out = start_panel(_)
                 await message.reply_photo(
-                    random.choice(YUMI_PICS),
+                    random.choice(NEXI_VID),
                     caption=_["start_3"].format(
                         message.from_user.mention,
                         app.mention,
