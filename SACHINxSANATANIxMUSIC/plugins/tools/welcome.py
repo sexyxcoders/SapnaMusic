@@ -85,8 +85,8 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
     draw = ImageDraw.Draw(background)
     font = ImageFont.truetype('SACHINxSANATANIxMUSIC/assets/font.ttf', size=60)
     welcome_font = ImageFont.truetype('SACHINxSANATANIxMUSIC/assets/font.ttf', size=60)
-   
-	draw.text((630, 230), f"USERNAME : {uname}", fill=(255, 255, 255), font=font)
+    
+    draw.text((630, 230), f"USERNAME : {uname}", fill=(255, 255, 255), font=font)
     draw.text((630, 300), f'NAME: {user}', fill=(255, 255, 255), font=font)
     draw.text((630, 450), f'ID: {id}', fill=(255, 255, 255), font=font)
 
