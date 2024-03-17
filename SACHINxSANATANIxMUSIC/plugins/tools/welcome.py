@@ -83,16 +83,13 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
     pfp = circle(pfp, brightness_factor=brightness_factor) 
     pfp = pfp.resize((500, 500))
     draw = ImageDraw.Draw(background)
-    font = ImageFont.truetype('SACHINxSANATANIxMUSIC/assets/font.ttf', size=70)
-    welcome_font = ImageFont.truetype('SACHINxSANATANIxMUSIC/assets/font.ttf', size=61)
-    #draw.text((630, 540), f'ID: {id}', fill=(255, 255, 255), font=font)
-    
+    font = ImageFont.truetype('SACHINxSANATANIxMUSIC/assets/font.ttf', size=60)
+    welcome_font = ImageFont.truetype('SACHINxSANATANIxMUSIC/assets/font.ttf', size=60)
+   
+	draw.text((630, 230), f"USERNAME : {uname}", fill=(255, 255, 255), font=font)
     draw.text((630, 300), f'NAME: {user}', fill=(255, 255, 255), font=font)
     draw.text((630, 450), f'ID: {id}', fill=(255, 255, 255), font=font)
-    draw.text((630, 150), f"{chatname}", fill=(225, 225, 225), font=welcome_font)
-    draw.text((630, 230), f"USERNAME : {uname}", fill=(255, 255, 255), font=font)
 
-    #
     pfp_position = (48, 88)
     background.paste(pfp, pfp_position, pfp)
     background.save(f"downloads/welcome#{id}.png")
