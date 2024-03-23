@@ -24,7 +24,7 @@ from SACHINxSANATANIxMUSIC.utils.database import (
 from SACHINxSANATANIxMUSIC.utils.decorators.language import LanguageStart
 from SACHINxSANATANIxMUSIC.utils.formatters import get_readable_time
 from SACHINxSANATANIxMUSIC.utils.inline import help_pannel, private_panel, start_panel
-from config import BANNED_USERS, AMOP
+from config import BANNED_USERS
 from strings import get_string
 
 NEXI_VID = [
@@ -59,7 +59,7 @@ async def start_pm(client, message: Message, _):
             keyboard = help_pannel(_)
             sticker_message = await message.reply_sticker(sticker=random.choice(STICKERS))
             asyncio.create_task(delete_sticker_after_delay(sticker_message))
-            await asyncio.sleep(2)  # Pause for 2 seconds
+            await asyncio.sleep(2)
             await message.delete()
             return await message.reply_video(
                 random.choice(NEXI_VID),
