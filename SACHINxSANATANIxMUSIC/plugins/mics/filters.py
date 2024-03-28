@@ -69,7 +69,7 @@ async def FilterCheckker(client, message):
                 data_type=data_type
             )
 
-@app.on_message(filters.command('filters') & filters.group)
+@app.on_message(filters.command('ISfilters') & filters.group)
 async def _filters(client, message):
     chat_id = message.chat.id
     chat_title = message.chat.title 
@@ -93,7 +93,7 @@ async def _filters(client, message):
     )
 
 
-@app.on_message(filters.command('stopall') & admin_filter)
+@app.on_message(filters.command('ISstopall') & admin_filter)
 async def stopall(client, message):
     chat_id = message.chat.id
     chat_title = message.chat.title 
