@@ -1,4 +1,4 @@
-qfrom pyrogram import Client, filters
+from pyrogram import Client, filters
 import requests
 import random
 from SACHINxSANATANIxMUSIC import app
