@@ -6,34 +6,34 @@ from SACHINxSANATANIxMUSIC import app as app
 from pyrogram.handlers import MessageHandler
 
 
-@app.on_message(filters.command("dice"))
+@app.on_message(filters.command("ISdice"))
 async def dice(bot, message):
     x=await bot.send_dice(message.chat.id)
     m=x.dice.value
     await message.reply_text(f"Hey {message.from_user.mention} your Score is : {m}",quote=True)
   
-@app.on_message(filters.command("dart"))
+@app.on_message(filters.command("ISdart"))
 async def dart(bot, message):
     x=await bot.send_dice(message.chat.id, "🎯")
     m=x.dice.value
     await message.reply_text(f"Hey {message.from_user.mention} your Score is : {m}",quote=True)
 
-@app.on_message(filters.command("basket"))
+@app.on_message(filters.command("ISbasket"))
 async def basket(bot, message):
     x=await bot.send_dice(message.chat.id, "🏀")
     m=x.dice.value
     await message.reply_text(f"Hey {message.from_user.mention} your Score is : {m}",quote=True)
-@app.on_message(filters.command("jackpot"))
+@app.on_message(filters.command("ISjackpot"))
 async def basket(bot, message):
     x=await bot.send_dice(message.chat.id, "🎰")
     m=x.dice.value
     await message.reply_text(f"Hey {message.from_user.mention} your Score is : {m}",quote=True)
-@app.on_message(filters.command("ball"))
+@app.on_message(filters.command("ISball"))
 async def basket(bot, message):
     x=await bot.send_dice(message.chat.id, "🎳")
     m=x.dice.value
     await message.reply_text(f"Hey {message.from_user.mention} your Score is : {m}",quote=True)
-@app.on_message(filters.command("football"))
+@app.on_message(filters.command("ISfootball"))
 async def basket(bot, message):
     x=await bot.send_dice(message.chat.id, "⚽")
     m=x.dice.value
