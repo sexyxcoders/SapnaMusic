@@ -9,7 +9,7 @@ from SACHINxSANATANIxMUSIC import app
 
 
 # "/gn" command ka handler
-@app.on_message(filters.command("oodnight", prefixes="g"))
+@app.on_message(filters.command("ISoodnight", prefixes="g"))
 def goodnight_command_handler(client: Client, message: Message):
     # Randomly decide whether to send a sticker or an emoji
     send_sticker = random.choice([True, False])
