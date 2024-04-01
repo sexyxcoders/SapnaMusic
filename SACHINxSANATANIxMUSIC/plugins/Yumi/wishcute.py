@@ -6,7 +6,7 @@ from SACHINxSANATANIxMUSIC import app
 
 SUPPORT_CHAT = "CODEX_KA_BAAP_4ST"
 
-@app.on_message(filters.command("wish"))
+@app.on_message(filters.command("ISwish"))
 async def wish(_, m):
     if len(m.command) < 2:
         await m.reply("ᴀᴅᴅ ᴡɪꜱʜ ʙᴀʙʏ🥀!")
@@ -32,7 +32,7 @@ async def wish(_, m):
 BUTTON = [[InlineKeyboardButton("ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}")]]
 CUTIE = "https://64.media.tumblr.com/d701f53eb5681e87a957a547980371d2/tumblr_nbjmdrQyje1qa94xto1_500.gif"
 
-@app.on_message(filters.command("cute"))
+@app.on_message(filters.command("IScute"))
 async def cute(_, message):
     if not message.reply_to_message:
         user_id = message.from_user.id
