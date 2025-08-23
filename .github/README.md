@@ -33,12 +33,12 @@
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
-[![GIF](https://github.com/SachinxSanatani/Sanatanixxmusic/blob/main/SACHINXSANATANI/.gif)](https://github.com/SachinxSanatani)
-   [![SACHIN_SANATANI](https://github-stats-alpha.vercel.app/api?username=sachinxsanatani "SHREE_SANATANI")](https://github-stats-alpha.vercel.app/api?username=sachinxsanatani "SHREE_SANATANI")
+[![GIF](https://github.com/EgoBots/SapnaMusic/blob/main/SACHINXSANATANI/.gif)](https://github.com/SachinxSanatani)
+   [![SACHIN_SANATANI](https://github-stats-alpha.vercel.app/api?username=aarumibots "SHREE_SANATANI")](https://github-stats-alpha.vercel.app/api?username=aarumibots "SHREE_SANATANI")
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
-**[˹ ᶦϻ‌ ⁣⁤⚚ нιмαиѕнι ˼ 侖](https://t.me/HIMANSHI_MUSIC_BOT)**
+**[˹ ᶦϻ‌ ⁣⁤⚚ нιмαиѕнι ˼ 侖](https://t.me/ZoyuXmusicRobot)**
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 <h3 align="center">
@@ -47,18 +47,18 @@
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 <p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/EgoBots/SapnaMusic"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-bringle?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
-<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/Its-my-edit/SANATANI-X-MUSIC"> <img 
+<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/EgoBots/SapnaMusic"> <img 
                                                                                                                           <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">     
                                                                                                                                
 <p align="center">
-<a href="https://telegram.me/SHREE_SANATANI"><img src="https://img.shields.io/badge/-☆ SACHIN%20 ☆-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://telegram.me/AarumiBots"><img src="https://img.shields.io/badge/-☆ SACHIN%20 ☆-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 <h3 align="center">
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 ### CONTACT-WITH-ME :
-<a href="https://t.me/V_VIP_OWNER"><img title="Telegram" src="https://img.shields.io/badge/Telegram-%23000000.svg?&style=for-the-badge&logo=telegram&logoColor=61DAFB"></a>
+<a href="https://t.me/Swagger_Soul"><img title="Telegram" src="https://img.shields.io/badge/Telegram-%23000000.svg?&style=for-the-badge&logo=telegram&logoColor=61DAFB"></a>
 <a href="https://www.instagram.com/mr_sachin_sanatani"><img title="Instagram" src="https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white"></a>
 
 
