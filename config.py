@@ -67,8 +67,8 @@ GIT_TOKEN = getenv(
 
 # ------------------------------------------------------------------------
 # -------------------------------------------------------------------------
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/All_sanatani_bot")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/Il_4ST_FIGHTER_lI")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/AarumiBots")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/AarumiChat")
 # ------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------
 
@@ -141,7 +141,7 @@ confirmer = {}
 # ------------------------------------------------------------------------
 # ------------------------------------------------------------------------
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://telegra.ph/file/cfbdee8103102bcb2e5da.jpg"
+    "START_IMG_URL", "https://files.catbox.moe/g74hbr.jpg"
 )
 PING_IMG_URL = getenv(
     "PING_IMG_URL", "https://telegra.ph/file/00360393a15daf7fc4e9d.jpg"
