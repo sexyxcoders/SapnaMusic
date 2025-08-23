@@ -12,7 +12,7 @@
 
 <p align="center">
     <b>ᴠɪsɪᴛᴏʀs</b><br>
- -->    <img align="middle" src="https://profile-counter.glitch.me/Sachinxsanatani/count.svg" />
+ -->    <img align="middle" src="https://profile-counter.glitch.me/ZoyuXmusicRobot/count.svg" />
 </p>
 
 
@@ -29,12 +29,12 @@
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
-![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=SACHINxSANATANI&repo=SANATANI-X-MUSIC&theme=flag-india)
+![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=ZoyuXmusicRobot&repo=ZOYUMUSIC&theme=flag-india)
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 [![GIF](https://github.com/EgoBots/SapnaMusic/blob/main/SACHINXSANATANI/.gif)](https://github.com/SachinxSanatani)
-   [![SACHIN_SANATANI](https://github-stats-alpha.vercel.app/api?username=aarumibots "SHREE_SANATANI")](https://github-stats-alpha.vercel.app/api?username=aarumibots "SHREE_SANATANI")
+   [![SACHIN_SANATANI](https://github-stats-alpha.vercel.app/api?username=ZoyuXmusicRobot "ZOYU MUSIC")](https://github-stats-alpha.vercel.app/api?username=ZoyuXmusicRobot "ZOYU MUSIC")
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
@@ -51,7 +51,7 @@
                                                                                                                           <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">     
                                                                                                                                
 <p align="center">
-<a href="https://telegram.me/AarumiBots"><img src="https://img.shields.io/badge/-☆ SACHIN%20 ☆-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://telegram.me/AarumiBots"><img src="https://img.shields.io/badge/-☆ ᴋᴀʀᴍᴀ%20 ☆-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 <h3 align="center">
 
