@@ -28,16 +28,16 @@ from strings import get_string
 
 
 AARU_PIC = [
-"https://files.catbox.moe/g74hbr.jpg",
-"https://files.catbox.moe/g74hbr.jpg",
-"https://files.catbox.moe/g74hbr.jpg",
-"https://files.catbox.moe/g74hbr.jpg",
-"https://files.catbox.moe/g74hbr.jpg",
-"https://files.catbox.moe/g74hbr.jpg",
-"https://files.catbox.moe/g74hbr.jpg",
-"https://files.catbox.moe/g74hbr.jpg",
-"https://files.catbox.moe/g74hbr.jpg",
-"https://files.catbox.moe/g74hbr.jpg",
+"https://ibb.co/bRrSjSRj",
+"https://ibb.co/xtbmK9dy",
+"https://ibb.co/bRrSjSRj",
+"https://ibb.co/xtbmK9dy",
+"https://ibb.co/bRrSjSRj",
+"https://ibb.co/xtbmK9dy",
+"https://ibb.co/bRrSjSRj",
+"https://ibb.co/xtbmK9dy",
+"https://ibb.co/bRrSjSRj",
+"https://ibb.co/xtbmK9dy",
 
 ]
 
