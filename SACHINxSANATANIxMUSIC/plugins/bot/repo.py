@@ -7,15 +7,15 @@ import httpx
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 start_txt = """
-:⧽ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛᴇᴧᴍ ˹ᴧᴧʀᴜᴍɪ ꭙ ʙᴏᴛѕ˼ ʀᴇᴘᴏs 
+<b>:⧽ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛᴇᴧᴍ ˹ᴧᴧʀᴜᴍɪ ꭙ ʙᴏᴛѕ˼ ʀᴇᴘᴏs</b> 
  
-:⧽ ʀᴇᴘᴏ ᴛᴏ ɴʜɪ ᴍɪʟᴇɢᴧ ʙʜᴧɪ ʏʜᴧ
+<b>:⧽ ʀᴇᴘᴏ ᴛᴏ ɴʜɪ ᴍɪʟᴇɢᴧ ʙʜᴧɪ ʏʜᴧ</b>
  
-:⧽ ᴧɢᴧʀ ʀᴇᴘᴏ ᴄʜᴧʜɪʏᴇ ᴛᴏ ʙʜᴧɪ ʀᴇᴘᴏ ᴘᴧɪᴅ ᴍɪʟ ᴊᴀʏᴇɢᴧ
+<b>:⧽ ᴧɢᴧʀ ʀᴇᴘᴏ ᴄʜᴧʜɪʏᴇ ᴛᴏ ʙʜᴧɪ ʀᴇᴘᴏ ᴘᴧɪᴅ ᴍɪʟ ᴊᴀʏᴇɢᴧ</b>
  
-:⧽ ᴄᴏɴᴛᴧᴄᴛ : ㅤㅤ- к ᴧ ʀ м ᴧ › ᴏᴘ ⇢ 
+<b>:⧽ ᴄᴏɴᴛᴧᴄᴛ :</b> <a href="https://t.me/Swagger_Soul">- к ᴧ ʀ м ᴧ › ᴏᴘ ⇢</a> 
 
-:⧽ ʀᴜɴ 24x7 ʟᴧɢ ϝʀᴇᴇ ᴡɪᴛʜᴏᴜᴛ sᴛᴏᴘ
+<b>:⧽ ʀᴜɴ 24x7 ʟᴧɢ ϝʀᴇᴇ ᴡɪᴛʜᴏᴜᴛ sᴛᴏᴘ</b>
  
 """
 
@@ -45,6 +45,8 @@ InlineKeyboardButton("ᴏꜰꜰɪᴄɪᴧʟ ᴍυꜱɪᴄ ʙᴏᴛ", url=f"https
     await msg.reply_photo(
         photo="https://ibb.co/xtbmK9dy",
         caption=start_txt,
-        reply_markup=reply_markup
-     has_spoiler=True
+        reply_markup=reply_markup,
+        has_spoiler=True,
+        parse_mode="html"
+ 
     )
