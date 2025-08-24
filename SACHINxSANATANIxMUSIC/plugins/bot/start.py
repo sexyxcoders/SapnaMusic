@@ -111,6 +111,7 @@ chat_id=message.chat.id,
             random.choice(AARU_PIC),
             caption=_["start_2"].format(message.from_user.mention, app.mention, UP, DISK, CPU, RAM,served_users,served_chats),
             reply_markup=InlineKeyboardMarkup(out),
+            has_spoiler=True
         )
         if await is_on_off(2):
             return await app.send_message(
@@ -128,6 +129,7 @@ async def start_gp(client, message: Message, _):
         random.choice(AARU_PIC),
         caption=_["start_1"].format(app.mention, get_readable_time(uptime)),
         reply_markup=InlineKeyboardMarkup(out),
+        has_spoiler=True
     )
     return await add_served_chat(message.chat.id)
 
