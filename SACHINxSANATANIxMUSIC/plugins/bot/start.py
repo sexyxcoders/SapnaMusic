@@ -55,6 +55,7 @@ async def start_pm(client, message: Message, _):
                 random.choice(AARU_PIC),
                 caption=_["help_1"].format(config.SUPPORT_CHAT),
                 reply_markup=keyboard,
+                has_spoiler=True
             )
         if name[0:3] == "sud":
             await sudoers_list(client=client, message=message, _=_)
@@ -170,6 +171,7 @@ async def welcome(client, message: Message):
                         app.mention,
                     ),
                     reply_markup=InlineKeyboardMarkup(out),
+                    has_spoiler=True
                 )
                 await add_served_chat(message.chat.id)
                 await message.stop_propagation()
