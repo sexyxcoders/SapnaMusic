@@ -22,7 +22,7 @@ start_txt = """
 
 
 
-@app.on_message(filters.command("ISrepo"))
+@app.on_message(filters.command("repo"))
 async def start(_, msg):
     buttons = [
         [ 
@@ -43,7 +43,8 @@ InlineKeyboardButton("ᴏꜰꜰɪᴄɪᴧʟ ᴍυꜱɪᴄ ʙᴏᴛ", url=f"https
     reply_markup = InlineKeyboardMarkup(buttons)
     
     await msg.reply_photo(
-        photo="https://telegra.ph/file/9131bdd30ab9c76349f25.jpg",
+        photo="https://ibb.co/xtbmK9dy",
         caption=start_txt,
         reply_markup=reply_markup
+     has_spoiler=True
     )
