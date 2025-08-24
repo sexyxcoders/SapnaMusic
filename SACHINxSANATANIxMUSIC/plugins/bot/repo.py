@@ -13,7 +13,7 @@ start_txt = """
  
 <b>:⧽ ᴧɢᴧʀ ʀᴇᴘᴏ ᴄʜᴧʜɪʏᴇ ᴛᴏ ʙʜᴧɪ ʀᴇᴘᴏ ᴘᴧɪᴅ ᴍɪʟ ᴊᴀʏᴇɢᴧ</b>
  
-<b>:⧽ ᴄᴏɴᴛᴧᴄᴛ :</b> <a href="https://t.me/Swagger_Soul">- к ᴧ ʀ м ᴧ › ᴏᴘ ⇢</a> 
+<b>:⧽ ᴄᴏɴᴛᴧᴄᴛ :    - к ᴧ ʀ м ᴧ › ᴏᴘ ⇢</b>
 
 <b>:⧽ ʀᴜɴ 24x7 ʟᴧɢ ϝʀᴇᴇ ᴡɪᴛʜᴏᴜᴛ sᴛᴏᴘ</b>
  
@@ -24,6 +24,7 @@ start_txt = """
 
 @app.on_message(filters.command("repo") & filters.private)
 async def repo_cmd(_, msg):
+    # Sirf /repo allow karna hai
     if msg.text.strip() != "/repo":
         return
     buttons = [
@@ -45,7 +46,7 @@ InlineKeyboardButton("ᴏꜰꜰɪᴄɪᴧʟ ᴍυꜱɪᴄ ʙᴏᴛ", url=f"https
     reply_markup = InlineKeyboardMarkup(buttons)
     
     await msg.reply_photo(
-        photo="https://files.catbox.moe/4jyyop.jpg",
+        photo="https://ibb.co/xtbmK9dy",
         caption=start_txt,
         reply_markup=reply_markup,
         has_spoiler=True,
