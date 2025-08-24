@@ -10,16 +10,17 @@ start_txt = """
 **
 ┌┬─────────────────⦿
 │├─────────────────╮
-│├ ᴛɢ ɴᴀᴍᴇ - sᴀᴄʜɪɴ sᴀɴᴀᴛᴀɴɪ
-│├ ʀᴇᴀʟ ɴᴀᴍᴇ - ᴘʀɪɴᴄᴇ ʀᴀᴊᴘᴜᴛ
+│├ ᴛɢ ɴᴧᴍᴇ - 7905552682
+│├  ɴᴧᴍᴇ - к ᴧ ʀ м ᴧ › ᴏᴘ ⇢
+│├ ᴜsᴇʀɴᴧᴍᴇ - @Swagger_Soul
 │├─────────────────╯
 ├┼─────────────────⦿
-├┤~ @Swagger_Soul
-├┤~ @AarumiBots
-├┤~ @AarumiChat
+├┤~ ᴏᴡɴᴇʀ » @Swagger_Soul
+├┤~ ᴜᴘᴅᴧᴛᴇ » @AarumiBots
+├┤~ sᴜᴘᴘᴏʀᴛ » @AarumiChat
 ├┼─────────────────⦿
 │├─────────────────╮
-│├OWNER│ @Swagger_Soul
+│├ ᴏᴡɴᴇʀ│ @Swagger_Soul
 │├─────────────────╯
 └┴─────────────────⦿
 **
@@ -32,7 +33,7 @@ start_txt = """
 async def start(_, msg):
     buttons = [
         [ 
-          InlineKeyboardButton(" 𝗦𝗔𝗖𝗛𝗜𝗡 𝗦𝗔𝗡𝗔𝗧𝗔𝗡𝗜 ", url=f"https://t.me/Swagger_Soul")
+          InlineKeyboardButton("ʙᴏᴛ ᴏᴡɴᴇʀ", url=f"https://t.me/Swagger_Soul")
         ],
         [
           InlineKeyboardButton("ᴜᴘᴅᴧᴛᴇ", url="https://t.me/AarumiBots"),
@@ -49,7 +50,8 @@ InlineKeyboardButton("ᴏꜰꜰɪᴄɪᴧʟ ᴍυꜱɪᴄ ʙᴏᴛ", url=f"https
     reply_markup = InlineKeyboardMarkup(buttons)
     
     await msg.reply_photo(
-        photo="https://telegra.ph/file/94f5088fdc7a0450bfa0a.jpg",
+        photo="https://files.catbox.moe/g74hbr.jpg",
         caption=start_txt,
-        reply_markup=reply_markup
+        reply_markup=reply_markup,
+        has_spoiler=True
     )
