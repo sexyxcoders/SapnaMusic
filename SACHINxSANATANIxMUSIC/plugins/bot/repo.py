@@ -24,7 +24,6 @@ start_txt = """
 
 @app.on_message(filters.command("repo") & filters.private)
 async def repo_cmd(_, msg):
-    # Sirf /repo allow karna hai
     if msg.text.strip() != "/repo":
         return
     buttons = [
@@ -46,7 +45,7 @@ InlineKeyboardButton("ᴏꜰꜰɪᴄɪᴧʟ ᴍυꜱɪᴄ ʙᴏᴛ", url=f"https
     reply_markup = InlineKeyboardMarkup(buttons)
     
     await msg.reply_photo(
-        photo="https://ibb.co/xtbmK9dy",
+        photo="https://files.catbox.moe/4jyyop.jpg",
         caption=start_txt,
         reply_markup=reply_markup,
         has_spoiler=True,
