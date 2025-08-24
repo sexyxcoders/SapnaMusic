@@ -22,8 +22,11 @@ start_txt = """
 
 
 
-@app.on_message(filters.command("repo"))
-async def start(_, msg):
+@app.on_message(filters.command("repo") & filters.private)
+async def repo_cmd(_, msg):
+    # Sirf /repo allow karna hai
+    if msg.text.strip() != "/repo":
+        return
     buttons = [
         [ 
           InlineKeyboardButton("⊚ ᴧᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴧᴛ ⊚", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
