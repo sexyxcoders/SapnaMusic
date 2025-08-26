@@ -19,7 +19,7 @@
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 <h2 align="center">
-    ─「 ＳＡＮＡＴＡＮＩ 」─
+    ─「ㅤ- к ᴧ ʀ м ᴧ › ᴏᴘ 𝃵⇢ 」─
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 ★ 𝗛𝗘𝗥𝗢𝗞𝗨 + 𝗩𝗣𝗦 ★
