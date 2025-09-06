@@ -20,21 +20,21 @@ start_txt = """
 
 
 
-@app.on_message(filters.command("ISrepo"))
+@app.on_message(filters.command("repo"))
 async def start(_, msg):
     buttons = [
         [ 
-          InlineKeyboardButton("ＡＤＤ ＭＥ ＢＡＢＹ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+          InlineKeyboardButton("⊚ ᴧᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴧᴛ ⊚", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
         ],
         [
-          InlineKeyboardButton("ＨＥＬＰ", url="https://t.me/SANATANI_IS_HERE"),
-          InlineKeyboardButton("ＳＡＣＨＩＮ", url="https://t.me/V_VIP_OWNER"),
+          InlineKeyboardButton("ᴜᴘᴅᴧᴛᴇ", url="https://t.me/AarumiBots"),
+          InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/AarumiChat"),
           ],
                [
-                InlineKeyboardButton("ＳＡＮＡＴＡＮＩ ＮＥＴＷＯＲＫ", url=f"https://t.me/SANATANI_IS_HERE"),
+                InlineKeyboardButton("cᴧʀʟᴇss ᴋᴧʀᴍᴧ", url=f"https://t.me/ONE_WAS_KARMA"),
 ],
 [
-InlineKeyboardButton("ＯＦＦＩＣＩＡＬ ＢＯＴ", url=f"https://t.me/HIMANSHI_MUSIC_BOT"),
+InlineKeyboardButton("ᴏꜰꜰɪᴄɪᴧʟ ᴍᴜsɪᴄ ʙᴏᴛ", url=f"https://t.me/AarumiSongBot"),
 
         ]]
     
