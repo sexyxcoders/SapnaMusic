@@ -6,16 +6,18 @@ from SACHINxSANATANIxMUSIC.utils.errors import capture_err
 import httpx 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-start_txt = """
-〄 ᴡᴇʟᴄᴏᴍᴇ ғᴏʀ sᴀᴄʜɪɴ sᴀɴᴀᴛᴀɴɪ ʀᴇᴘᴏs 〄
+start_txt = """**
+:⧽  ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛᴇᴧᴍ ˹ᴧᴧʀᴜᴍɪ ꭙ ʙᴏᴛѕ˼ ʀᴇᴘᴏs
  
-࿃ ᴍᴇʀᴀ ʟᴀɴᴅ ʟᴇ ʟᴇ
+:⧽  ʀᴇᴘᴏ ᴛᴏ ɴʜɪ ᴍɪʟᴇɢᴧ ʙʜᴧɪ ʏʜᴧ
  
-࿃ ᴛᴇʀɪ ᴍᴀ ᴋɪ ᴄʜᴜᴛ ʀᴀɴᴅɪ ᴋᴇ
+:⧽  ᴧɢᴧʀ ʀᴇᴘᴏ ᴄʜᴧʜɪʏᴇ ᴛᴏ ʙʜᴧɪ ʀᴇᴘᴏ ᴘᴧɪᴅ ᴍɪʟ ᴊᴀʏᴇɢᴧ
  
-࿃ ʀᴜɴ 24x7 ʟᴀɢ ғʀᴇᴇ ᴡɪᴛʜᴏᴜᴛ sᴛᴏᴘ
+:⧽  ᴄᴏɴᴛᴧᴄᴛ : ㅤㅤ- к ᴧ ʀ м ᴧ › ᴏᴘ ⇢ 
+
+:⧽  ʀᴜɴ 24x7 ʟᴧɢ ϝʀᴇᴇ ᴡɪᴛʜᴏᴜᴛ sᴛᴏᴘ
  
-"""
+"""**
 
 
 
