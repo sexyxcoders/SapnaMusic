@@ -43,5 +43,6 @@ InlineKeyboardButton("ＯＦＦＩＣＩＡＬ ＢＯＴ", url=f"https://t.me/HI
     await msg.reply_photo(
         photo="https://telegra.ph/file/9131bdd30ab9c76349f25.jpg",
         caption=start_txt,
-        reply_markup=reply_markup
+        reply_markup=reply_markup,
+        has_spoiler=True
     )
