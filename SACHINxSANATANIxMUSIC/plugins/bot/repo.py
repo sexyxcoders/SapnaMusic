@@ -35,7 +35,7 @@ async def repo_handler(_, msg):
         photo="https://telegra.ph/file/9131bdd30ab9c76349f25.jpg",
         caption=start_txt,
         reply_markup=reply_markup,
-        parse_mode="markdown",  
+        parse_mode="html",  
         disable_notification=True,
         has_spoiler=True
     )
