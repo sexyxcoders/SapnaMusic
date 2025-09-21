@@ -48,8 +48,8 @@ def get_int_env(var_name, default):
     except ValueError:
         raise ValueError(f"[ERROR] {var_name} must be a numeric Telegram ID. Got: {value}")
 
-LOGGER_ID = get_int_env("LOGGER_ID", -1003072931688)
-OWNER_ID = get_int_env("OWNER_ID", 7804917014)
+LOGGER_ID = int(getenv("LOGGER_ID", "-1003072931688"))
+OWNER_ID = int(getenv("OWNER_ID","7804917014"))
 
 # ------------------------------
 # Heroku / Git
