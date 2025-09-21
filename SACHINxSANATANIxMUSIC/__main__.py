@@ -1,6 +1,6 @@
 import asyncio
 import importlib
-
+import sys
 from pyrogram import idle
 from pytgcalls.exceptions import NoActiveGroupCall
 
@@ -14,16 +14,14 @@ from config import BANNED_USERS
 
 
 async def init():
-    if (
-        not config.STRING1
-        and not config.STRING2
-        and not config.STRING3
-        and not config.STRING4
-        and not config.STRING5
-    ):
-        LOGGER(__name__).error("𝐒𝐭𝐫𝐢𝐧𝐠 𝐒𝐞𝐬𝐬𝐢𝐨𝐧 𝐍𝐨𝐭 𝐅𝐢𝐥𝐥𝐞𝐝, 𝐏𝐥𝐞𝐚𝐬𝐞 𝐅𝐢𝐥𝐥 𝐀 𝐏𝐲𝐫𝐨𝐠𝐫𝐚𝐦 𝐒𝐞𝐬𝐬𝐢𝐨𝐧")
-        exit()
+    if not any([config.STRING1, config.STRING2, config.STRING3, config.STRING4, config.STRING5]):
+        LOGGER(__name__).error(
+            "𝐒𝐭𝐫𝐢𝐧𝐠 𝐒𝐞𝐬𝐬𝐢𝐨𝐧 𝐍𝐨𝐭 𝐅𝐢𝐥𝐥𝐞𝐝, 𝐏𝐥𝐞𝐚𝐬𝐞 𝐅𝐢𝐥𝐥 𝐀 𝐏𝐲𝐫𝐨𝐠𝐫𝐚𝐦 𝐒𝐞𝐬𝐬𝐢𝐨𝐧"
+        )
+        sys.exit(1)
+
     await sudo()
+
     try:
         users = await get_gbanned()
         for user_id in users:
@@ -31,28 +29,41 @@ async def init():
         users = await get_banned_users()
         for user_id in users:
             BANNED_USERS.add(user_id)
-    except:
+    except Exception:
         pass
+
     await app.start()
-    for all_module in ALL_MODULES:
-        importlib.import_module("SACHINxSANATANIxMUSIC.plugins" + all_module)
-    LOGGER("SACHINxSANATANIxMUSIC.plugins").info("𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐝 𝐁𝐚𝐛𝐲🥳...")
+
+    for module in ALL_MODULES:
+        importlib.import_module("SACHINxSANATANIxMUSIC.plugins" + module)
+    LOGGER("SACHINxSANATANIxMUSIC.plugins").info("𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐃 🥳...")
+
     await userbot.start()
-    await DAXX.start()
+
+    # Initialize DAXX instance
+    bot = DAXX()
+    await bot.start()
+
+    # Stream test file
     try:
-        await DAXX.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
+        await bot.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
     except NoActiveGroupCall:
         LOGGER("SACHINxSANATANIxMUSIC").error(
-            "𝗣𝗹𝗭 𝗦𝗧𝗔𝗥𝗧 𝗬𝗢𝗨𝗥 𝗟𝗢𝗚 𝗚𝗥𝗢𝗨𝗣 𝗩𝗢𝗜𝗖𝗘𝗖𝗛𝗔𝗧\𝗖𝗛𝗔𝗡𝗡𝗘𝗟\n\n𝗗𝗔𝗫𝗫 𝗕𝗢𝗧 𝗦𝗧𝗢𝗣........"
+            "𝗣𝗹𝗭 𝗦𝗧𝗔𝗥𝗧 𝗬𝗢𝗨𝗥 𝗟𝗢𝗚 𝗚𝗥𝗢𝗨𝗣 𝗩𝗢𝗜𝗖𝗘𝗖𝗛𝗔𝗧/𝗖𝗛𝗔𝗡𝗡𝗘𝗟\n\n𝗗𝗔𝗫𝗫 𝗕𝗢𝗧 𝗦𝗧𝗢𝗣........"
         )
-        exit()
-    except:
+        sys.exit(1)
+    except Exception:
         pass
-    await DAXX.decorators()
+
+    await bot.decorators()
+
     LOGGER("SACHINxSANATANIxMUSIC").info(
-        "╔═════ஜ۩۞۩ஜ════╗\n  ☠︎︎𝗠𝗔𝗗𝗘 𝗕𝗬 𝗭𝗢𝗬𝗨 𝗠𝗨𝗦𝗜𝗖☠︎︎\n╚═════ஜ۩۞۩ஜ════╝"
+        "╔═════ஜ۩۞۩ஜ════╗\n  ☠︎𝗠𝗔𝗗𝗘 𝗕𝗬 𝗭𝗢𝗬𝗨 𝗠𝗨𝗦𝗜𝗖☠︎︎\n╚═════ஜ۩۞۩ஜ════╝"
     )
+
     await idle()
+
+    await bot.stop()
     await app.stop()
     await userbot.stop()
     LOGGER("SACHINxSANATANIxMUSIC").info("𝗦𝗧𝗢𝗣 𝗭𝗢𝗬𝗨 𝗠𝗨𝗦𝗜𝗖🎻 𝗕𝗢𝗧..")
