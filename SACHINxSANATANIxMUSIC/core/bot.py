@@ -1,53 +1,65 @@
 from pyrogram import Client, errors
-from pyrogram.enums import ChatMemberStatus, ParseMode
+from pyrogram.enums import ChatMemberStatus
 
 import config
-
 from ..logging import LOGGER
 
 
+# 🔴 Hardcode your log group/channel ID here
+LOG_CHAT = -1003072931688   # replace with your real log group ID
+
+
 class DAXX(Client):
-    def __init__(self):
-        LOGGER(__name__).info(f"Starting Bot...")
-        super().__init__(
+    def init(self):
+        LOGGER(name).info("Starting Bot...")
+        super().init(
             name="ZoyuXmusicRobot",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             bot_token=config.BOT_TOKEN,
             in_memory=True,
             max_concurrent_transmissions=7,
+            parse_mode="html",   # added to handle HTML formatting
         )
 
     async def start(self):
         await super().start()
+        self.me = await self.get_me()   # ✅ fetch bot info safely
         self.id = self.me.id
-        self.name = self.me.first_name + " " + (self.me.last_name or "")
+        self.name = self.me.first_name + (" " + self.me.last_name if self.me.last_name else "")
         self.username = self.me.username
         self.mention = self.me.mention
 
         try:
             await self.send_message(
-                chat_id=config.LOGGER_ID,
-                text=f"<u><b>» {self.mention} ʙᴏᴛ sᴛᴀʀᴛᴇᴅ :</b><u>\n\nɪᴅ : <code>{self.id}</code>\nɴᴀᴍᴇ : {self.name}\nᴜsᴇʀɴᴀᴍᴇ : @{self.username}",
+                chat_id=LOG_CHAT,
+                text=(
+                    f"<u><b>» {self.mention} ʙᴏᴛ sᴛᴀʀᴛᴇᴅ :</b></u>\n\n"
+                    f"ɪᴅ : <code>{self.id}</code>\n"
+                    f"ɴᴀᴍᴇ : {self.name}\n"
+                    f"ᴜsᴇʀɴᴀᴍᴇ : @{self.username}"
+                ),
             )
         except (errors.ChannelInvalid, errors.PeerIdInvalid):
-            LOGGER(__name__).error(
-                "Bot has failed to access the log group/channel. Make sure that you have added your bot to your log group/channel."
+            LOGGER(name).error(
+                "Bot has failed to access the log group/channel. "
+                "Make sure you added the bot to the log group/channel."
             )
-            exit()
+            import sys; sys.exit(1)
         except Exception as ex:
-            LOGGER(__name__).error(
-                f"Bot has failed to access the log group/channel.\n  Reason : {type(ex).__name__}."
+            LOGGER(name).error(
+                f"Bot has failed to access the log group/channel.\n  Reason : {type(ex).name}."
             )
-            exit()
+            import sys; sys.exit(1)
 
-        a = await self.get_chat_member(config.LOGGER_ID, self.id)
+        a = await self.get_chat_member(LOG_CHAT, self.id)
         if a.status != ChatMemberStatus.ADMINISTRATOR:
-            LOGGER(__name__).error(
+            LOGGER(name).error(
                 "Please promote your bot as an admin in your log group/channel."
             )
-            exit()
-        LOGGER(__name__).info(f"Music Bot Started as {self.name}")
+            import sys; sys.exit(1)
+
+        LOGGER(name).info(f"Music Bot Started as {self.name}")
 
     async def stop(self):
         await super().stop()
