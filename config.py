@@ -9,24 +9,24 @@ from pyrogram import filters
 load_dotenv()
 # ------------------------------------
 # -----------------------------------------------------
-API_ID = int(getenv("API_ID"))
-API_HASH = getenv("API_HASH")
+API_ID = int(getenv("API_ID","22657083"))
+API_HASH = getenv("API_HASH","d6186691704bd901bdab275ceaab88f3")
 # ------------------------------------------------------
-BOT_TOKEN = getenv("BOT_TOKEN")
+BOT_TOKEN = getenv("BOT_TOKEN","")
 # -------------------------------------------------------
-OWNER_USERNAME = getenv("OWNER_USERNAME","Swagger_Soul")
+OWNER_USERNAME = getenv("OWNER_USERNAME","OnForHer")
 # --------------------------------------------------------
-BOT_USERNAME = getenv("BOT_USERNAME" , "ZoyuXmusicRobot")
+BOT_USERNAME = getenv("BOT_USERNAME" , "MahiruProBot")
 # --------------------------------------------------------
-BOT_NAME = getenv("BOT_NAME" , "ZOYUMUSIC")
+BOT_NAME = getenv("BOT_NAME" , "˹ɱ𝛂ʜ𝛊ʀʊ ɱʊ𝛅𝛊ς˼ ♪ [ 𝛈 ꪮ ⋏∂𝛅 ]")
 # ---------------------------------------------------------
-ASSUSERNAME = getenv("ASSUSERNAME" , "Missaarum")
+ASSUSERNAME = getenv("ASSUSERNAME" , "MahiruxAssistant")
 # ---------------------------------------------------------
 
 
 #---------------------------------------------------------------
 #---------------------------------------------------------------
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://pikachuxivan_db_user:pikachuxivan@cluster0.9c3hko7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 
@@ -35,10 +35,10 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 17000))
 # ----------------------------------------------------------------
 
 # ----------------------------------------------------------------
-LOGGER_ID = int(getenv("LOGGER_ID", -1002002218073))
+LOGGER_ID = int(getenv("LOGGER_ID","-1003072931688"))
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
-OWNER_ID = int(getenv("OWNER_ID", 7905552682))
+OWNER_ID = int(getenv("OWNER_ID","7804917014"))
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
 
@@ -67,8 +67,8 @@ GIT_TOKEN = getenv(
 
 # ------------------------------------------------------------------------
 # -------------------------------------------------------------------------
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/AarumiBots")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/AarumiChat")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/UsCouples")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/+w9ODyFLtrN45YTY1")
 # ------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------
 
@@ -114,7 +114,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", "5242880000"))
 # ------------------------------------
 # ------------------------------------
 # ------------------------------------
-STRING1 = getenv("STRING_SESSION", None)
+STRING1 = getenv("STRING_SESSION","")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
@@ -141,21 +141,21 @@ confirmer = {}
 # ------------------------------------------------------------------------
 # ------------------------------------------------------------------------
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://files.catbox.moe/wpetjp.jpg"
+    "START_IMG_URL", "https://files.catbox.moe/exw839.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://files.catbox.moe/2cl46l.jpg"
+    "PING_IMG_URL", "https://files.catbox.moe/ddkc5f.jpg"
 )
-PLAYLIST_IMG_URL = "https://files.catbox.moe/wpetjp.jpg"
-STATS_IMG_URL = "https://files.catbox.moe/wpetjp.jpg"
-TELEGRAM_AUDIO_URL = "https://files.catbox.moe/wpetjp.jpg"
-TELEGRAM_VIDEO_URL = "https://telegra.ph/file/e575ae40d6635250974e1.jpg"
-STREAM_IMG_URL = "https://files.catbox.moe/wpetjp.jpg"
-SOUNCLOUD_IMG_URL = "https://files.catbox.moe/wpetjp.jpg"
-YOUTUBE_IMG_URL = "https://files.catbox.moe/wpetjp.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://files.catbox.moe/wpetjp.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://files.catbox.moe/wpetjp.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://files.catbox.moe/wpetjp.jpg"
+PLAYLIST_IMG_URL = "https://files.catbox.moe/2nw6zu.jpg"
+STATS_IMG_URL = "https://files.catbox.moe/3v8uls.jpg"
+TELEGRAM_AUDIO_URL = "https://files.catbox.moe/1bu0q0.jpg"
+TELEGRAM_VIDEO_URL = "https://files.catbox.moe/1bu0q0.jpg"
+STREAM_IMG_URL = "https://files.catbox.moe/1bu0q0.jpg"
+SOUNCLOUD_IMG_URL = "https://files.catbox.moe/1bu0q0.jpg"
+YOUTUBE_IMG_URL = "https://files.catbox.moe/1bu0q0.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://files.catbox.moe/dkn1xh.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://files.catbox.moe/dkn1xh.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://files.catbox.moe/dkn1xh.jpg"
 
 # ------------------------------------------------------------------------
 # ------------------------------------------------------------------------
